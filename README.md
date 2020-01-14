@@ -5,7 +5,7 @@
 ## Installation
 
 **youtube-dl-electron-gui** is a standalone application with no dependencies. There is a Windows installer package as well as a portable version.
-
+Downloads are available in the [Releases](https://github.com/karasevm/youtube-dl-electron-gui/releases/latest).
 ## Building
 
 1. Clone the repo
