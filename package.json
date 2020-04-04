@@ -1,6 +1,6 @@
 {
   "name": "youtube-dl-electron-gui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GUI for youtube-dl",
   "main": "main.js",
   "scripts": {
@@ -10,12 +10,12 @@
   },
   "author": {
     "name": "Maksim Karasev",
-    "email" : "contact@karasevm.ru"
+    "email": "contact@karasevm.ru"
   },
-  "license" : "GPL-3.0",
+  "license": "GPL-3.0",
   "devDependencies": {
-    "electron": "^7.1.3",
-    "electron-builder": "^21.2.0"
+    "electron": "^8.2.0",
+    "electron-builder": "^22.4.1"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
@@ -32,9 +32,10 @@
         "filter": [
           "**/*"
         ]
-      }],
+      }
+    ],
     "win": {
-      "target":[
+      "target": [
         {
           "target": "portable",
           "arch": [
