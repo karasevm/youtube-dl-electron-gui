@@ -1,14 +1,26 @@
 const { dialog } = require("electron").remote;
+const { getAppPath, exit } = require("electron").remote.app;
 const { spawn } = require("child_process");
-const ffmpegPath = process.resourcesPath + "\\bin\\" + "ffmpeg.exe";
+const isDev = require("electron-is-dev");
+const resources = isDev ? getAppPath() : process.resourcesPath;
+const ffmpegPath = resources + "\\bin\\" + "ffmpeg.exe";
 const percentageRe = /\[download\] *(\d{1,3}.\d)/gm;
 const qualityRe = /^((\d{1,3}).*)/gm;
 var YouTubeDl = {
   exists: false,
   usable: false,
-  path: process.resourcesPath + "\\bin\\" + "youtube-dl.exe",
+  path: resources + "\\bin\\" + "youtube-dl.exe",
 };
-console.log(process.resourcesPath);
+process.on("uncaughtException", function (err) {
+  console.error(err);
+  console.log("Node NOT Exiting...");
+  if (err.code === "ENOENT") {
+    alert(
+      "Missing youtube-dl executable or cant execute it. Restart and try again."
+    );
+    exit();
+  }
+});
 YouTubeDl.execute = function (args, stdoutCallback, closeCallback) {
   try {
     var child = spawn(YouTubeDl.path, args);
