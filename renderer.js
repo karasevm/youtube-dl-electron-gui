@@ -202,8 +202,8 @@ function downloadVideo() {
     alert("Please choose a download folder");
     return;
   }
+  prefStore.set("lastPath", document.querySelector("#saveLocation").value);
   let path = document.querySelector("#saveLocation").value + "\\";
-  prefStore.set("lastPath", path);
   if (document.querySelector("#videoUrl").value == "") {
     alert("Please enter a video URL to download");
     return;
