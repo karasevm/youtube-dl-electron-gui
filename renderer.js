@@ -2,6 +2,8 @@ const { dialog } = require("electron").remote;
 const { getAppPath, exit } = require("electron").remote.app;
 const { spawn } = require("child_process");
 const isDev = require("electron-is-dev");
+const Store = require("electron-store");
+const prefStore = new Store();
 const resources = isDev ? getAppPath() : process.resourcesPath;
 const ffmpegPath = resources + "\\bin\\" + "ffmpeg.exe";
 const percentageRe = /\[download\] *(\d{1,3}.\d)/gm;
@@ -21,6 +23,7 @@ process.on("uncaughtException", function (err) {
     exit();
   }
 });
+document.querySelector("#saveLocation").value = prefStore.get("lastPath", "");
 YouTubeDl.execute = function (args, stdoutCallback, closeCallback) {
   try {
     var child = spawn(YouTubeDl.path, args);
@@ -54,6 +57,7 @@ YouTubeDl.execute = function (args, stdoutCallback, closeCallback) {
     if (typeof closeCallback === "function") closeCallback(scriptOutput, code);
   });
 };
+
 try {
   YouTubeDl.execute(null, null, (s, code) => {
     YouTubeDl.exists = true;
@@ -199,6 +203,7 @@ function downloadVideo() {
     return;
   }
   let path = document.querySelector("#saveLocation").value + "\\";
+  prefStore.set("lastPath", path);
   if (document.querySelector("#videoUrl").value == "") {
     alert("Please enter a video URL to download");
     return;
