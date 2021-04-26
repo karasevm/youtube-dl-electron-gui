@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "Save Directory": "Сохранить в",
+    "Browse": "Открыть",
+    "Video URL": "URL",
+    "Quality": "Качество",
+    "Best": "Лучшее",
+    "Download": "Скачать",
+    "Downloading": "Загрузка",
+    "Error": "Ошибка",
+    "youtube-dl version": "Версия youtube-dl",
+    "Checking for updates": "Проверка обновлений",
+    "Updating to new version": "Обновление...",
+    "You&apos;re using the latest version": "Вы используете последнюю версию",
+    "Error updating youtube-dl, try restarting": "Ошибка обновления, попробуйте позже",
+    "file-already-exists": "Файл уже существует",
+    "Undo": "Отменить",
+    "Redo": "Повтор",
+    "Cut": "Вырезать",
+    "Copy": "Копировать",
+    "Paste": "Вставить",
+    "Select All": "Выделить все"
+  }
+}

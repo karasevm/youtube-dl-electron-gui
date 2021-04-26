@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "Save Directory": "Save Directory",
+    "Browse": "Browse",
+    "Video URL": "Video URL",
+    "Quality": "Quality",
+    "Best": "Best",
+    "Download": "Download",
+    "Downloading": "Downloading",
+    "Error": "Error",
+    "youtube-dl version": "youtube-dl version",
+    "Checking for updates": "Checking for updates",
+    "Updating to new version": "Updating to new version",
+    "You&apos;re using the latest version": "You're using the latest version",
+    "Error updating youtube-dl, try restarting": "Error updating youtube-dl, try restarting",
+    "file-already-exists": "File already exists",
+    "Undo": "Undo",
+    "Redo": "Redo",
+    "Cut": "Cut",
+    "Copy": "Copy",
+    "Paste": "Paste",
+    "Select All": "Select All"
+  }
+}
