@@ -1,7 +1,7 @@
 {
   "name": "youtube-dl-electron-gui",
   "productName": "youtube-dl-electron-gui",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "GUI for youtube-dl",
   "main": "./main.prod.js",
   "author": {

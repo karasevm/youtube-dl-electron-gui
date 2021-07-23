@@ -2,7 +2,7 @@
   "name": "youtube-dl-electron-gui",
   "productName": "youtube-dl-electron-gui",
   "description": "GUI for youtube-dl",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": {
     "name": "Maksim Karasev",
     "email": "maksim@karasevm.ru"
