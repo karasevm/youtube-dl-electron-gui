@@ -72,6 +72,7 @@ export default function App() {
 
   const videoURLChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setVideoURL(e.target.value);
+    setQualityList([[]]);
     debouncedUrl.callback(e.target.value);
   };
 
