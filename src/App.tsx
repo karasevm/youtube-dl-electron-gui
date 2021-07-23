@@ -163,9 +163,13 @@ export default function App() {
                   value={videoQuality}
                   onChange={videoQualityChangeHandler}
                   as="select"
+                  disabled={qualityList.length < 2}
                 >
                   <option value="(bestvideo+bestaudio/best)">
                     {t('Best')}
+                  </option>
+                  <option value="bestaudio">
+                    {t('Best audio only')}
                   </option>
                   {qualityList.length > 0 && qualityList[0].length > 0
                     ? qualityList.map((quality) => (
