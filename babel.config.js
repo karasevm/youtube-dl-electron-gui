@@ -41,6 +41,10 @@ module.exports = (api) => {
         require('@babel/plugin-proposal-nullish-coalescing-operator'),
         { loose: false },
       ],
+      [
+        require('@babel/plugin-proposal-private-methods'), 
+        { loose: true }
+      ],
       require('@babel/plugin-proposal-do-expressions'),
 
       // Stage 2
